@@ -2,72 +2,70 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>Documents</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-<style>
-	.container{width: 600px;
-	margin: 0 auto;}
-	form{display: none;}
-	</style>
+    <meta charset="utf-8">
+    <title>Documents</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            width: 600px;
+            margin: 0 auto;
+        }
+        
+        form {
+            display: none;
+        }
+    </style>
 </head>
 
 <body ng-app="myPlanDay">
-<div class="container">
-	<h1>Plan your day!</h1>
-	<div ng-controller="myPlanDayCtrl as my">
-		<br>
-		<div class="row">
-  <div class="col-xs-10">
-	  <input type="text" class="form-control" ng-model="my.newAddPlanDay" value="Add new task..." size="53"></div>
-			<input type="button" class="btn btn-success" value="add" ng-click="my.addPlanDay()"></div>
-		<br>
-		<br>
-		<table class="table table-hover">
-			<tr>
-				<th ng-model="my.newDel">Deleting</th>
-				<th ng-model="my.newTask">Task</th>
-				<th ng-model="my.newCheckk">Check</th>
-				<th ng-model="my.newProgress">Done/In progress</th>
-				<th ng-model="my.newEdit">Edit</th>
-			</tr>
-			<tr ng-repeat="plan in my.PlanDay ">
-				<td>
-					<input type="button" class="btn btn-danger" value="delete" ng-click="my.delPlanDay(plan)">
-				</td>
-				<td> {{plan.task}}</td>
-				<td>
-					<input type="checkbox" ng-click="my.checkPlanDay(plan)">
-				</td>
-				<td> {{plan.progress}}</td>
-				<!--        <td > {{my.state}}</td>-->
-				<td>
-					<input type="button" value="edit" class="btn btn-info" ng-click="my.editPlanDay(plan)">
-					<td>
-			</tr>
-		</table>
-	
-	<br>
-	<form>
-	<div class="row">
-  <div class="col-xs-10">
-	<input type="text" class="form-control" ng-model="my.textPlan" size="53">
-		 </div>
-<input type="button" value="Save" class="btn btn-success" ng-click="my.editPlan()">
-		 </div> </form>
-		 
-		 </div>
-		 </div>
-		
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
- 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script> 
-	
-	<script src="app/app.js"></script>
-	<script src="app/controller/my.controller.js"></script>
-
+    <div class="container">
+        <h1>Plan your day!</h1>
+        <div ng-controller="myPlanDayCtrl as my">
+            <br>
+            <div class="row">
+                <div class="col-xs-10">
+                    <input type="text" class="form-control" ng-model="my.newAddPlanDay" value="Add new task..." size="53">
+                </div>
+                <input type="button" class="btn btn-success" value="add" ng-click="my.addPlanDay()">
+            </div>
+            <br>
+            <br>
+            <table class="table table-hover">
+                <tr>
+                    <th ng-model="my.newDel">Deleting</th>
+                    <th ng-model="my.newTask">Task</th>
+                    <th ng-model="my.newCheckk">Check</th>
+                    <th ng-model="my.newProgress">Done/In progress</th>
+                    <th ng-model="my.newEdit">Edit</th>
+                </tr>
+                <tr ng-repeat="plan in my.PlanDay ">
+                    <td>
+                        <input type="button" class="btn btn-danger" value="delete" ng-click="my.delPlanDay(plan)"> </td>
+                    <td> {{plan.task}}</td>
+                    <td>
+                        <input type="checkbox" ng-click="my.checkPlanDay(plan)"> </td>
+                    <td> {{plan.progress}}</td>
+                    <!--        <td > {{my.state}}</td>-->
+                    <td>
+                        <input type="button" value="edit" class="btn btn-info" ng-click="my.editPlanDay(plan)">
+                        <td>
+                </tr>
+            </table>
+            <br>
+            <form>
+                <div class="row">
+                    <div class="col-xs-10">
+                        <input type="text" class="form-control" ng-model="my.textPlan" size="53"> </div>
+                    <input type="button" value="Save" class="btn btn-success" ng-click="my.editPlan()"> </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controller/my.controller.js"></script>
 </body>
 
 </html>
