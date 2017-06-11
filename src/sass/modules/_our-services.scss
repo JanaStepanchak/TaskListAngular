@@ -1,10 +1,10 @@
-.our-services-wrapper{
+.our-services-wrapper {
     justify-content: flex-start;
     position: relative;
     z-index: 1;
 }
 
-.our-services-image{
+.our-services-image {
     background: {
         image: url("../images/tablet.png");
         size: cover;
@@ -16,7 +16,7 @@
     z-index: 2;
 }
 
-.our-services-content{
+.our-services-content {
     background-image: url("../images/background.png");
     background-size: cover;
     width: 54%;
@@ -26,29 +26,34 @@
     z-index: 2;
 }
 
-.our-services-content-title{
-    font-size: 36px;
-    font-family: "SourceSansPro";
-    color: $binoWhite2;
-    font-weight: bold;
-    line-height: 1.2;
-    text-align: left;
-    text-transform: uppercase;
+.our-services-content-title {
     padding-top: 150px;
     margin-right: 83px;
 
-    .rectangle{
+    .our-services-content-title-text {
+        font-size: 36px;
+        color: $binoWhite2;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .rectangle-block {
         margin: 0 0 0 30px;
+        height: 36px;
+        width: 6px;
+        background-color: $binoRed;
     }
 
 }
 
-.content-block{
+.content-block {
     flex-direction: column;
     align-items: flex-end;
 }
 
-.content-item{
+.content-item {
     width: 80%;
     flex-direction: column;
     align-items: flex-end;
@@ -61,7 +66,7 @@
     }
 }
 
-.content-block-title{
+.content-block-title {
     font-size: 18px;
     font-family: "OpenSans";
     color: $binoRed;
@@ -70,9 +75,8 @@
     padding: 0 83px 0 0;
 }
 
-.content-block-text{
+.content-block-text {
     font-size: 14px;
-    font-family: "SourceSansPro";
     color: $binoLightGrey;
     line-height: 2.071;
     text-align: right;
@@ -98,17 +102,20 @@
     z-index: 50;
     cursor: pointer;
 
-    &:hover{
-        border: 5px solid $binoRed;
+    &:hover {
+        border: 5px solid rgba($binoRed, 0.5);
+        background-clip: padding-box;
     }
 }
 
-.ellipse_1{
+.ellipse_1 {
     top: 35%;
 }
-.ellipse_2{
+
+.ellipse_2 {
     top: 55%;
 }
-.ellipse_3{
+
+.ellipse_3 {
     top: 75%;
 }
